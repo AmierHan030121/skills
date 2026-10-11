@@ -198,7 +198,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate images via image_base_url/image_apikey.")
     parser.add_argument("--prompt", help="Image prompt text")
     parser.add_argument("--prompt-file", help="Path to prompt text file")
-    parser.add_argument("--model", default="gpt-image-2")
+    parser.add_argument("--model", default="gpt-image-2.5-sunburst")
     parser.add_argument("--size", default="1024x1024")
     parser.add_argument("--quality", default="auto")
     parser.add_argument("--n", type=int, default=1)

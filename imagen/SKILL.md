@@ -1,6 +1,6 @@
 ---
 name: imagen
-description: 通过独立图片网关生成图片（默认 gpt-image-2），并把结果保存到当前工作目录。只要用户提到 @imagen、imagen、gpt-image-2 单独分组、中转站图片接口、或希望不切换 ccSwitch 分组直接出图，就应使用本技能。技能会从 ~/.codex/config.toml 读取 image_base_url 与 image_apikey。
+description: 通过独立图片网关生成图片（默认 gpt-image-2.5-sunburst），并把结果保存到当前工作目录。只要用户提到 @imagen、imagen、gpt-image-2.5-sunburst 单独分组、中转站图片接口、或希望不切换 ccSwitch 分组直接出图，就应使用本技能。技能会从 ~/.codex/config.toml 读取 image_base_url 与 image_apikey。
 ---
 
 # imagen
@@ -15,7 +15,8 @@ description: 通过独立图片网关生成图片（默认 gpt-image-2），并�
 
 ## 默认行为
 
-1. 使用 `scripts/imagen.py` 调用图片接口，默认模型 `gpt-image-2`。
+1. 使用 `scripts/imagen.py` 调用图片接口，默认模型 `gpt-image-2.5-sunburst`。
+   用户通过 `@imagen` 调用时，除非明确指定其他模型，否则使用此默认模型；不要静默回退到旧模型。
 2. 默认把文件保存到“当前工作目录”（`$PWD`）。
 3. 默认输出格式 `png`，自动带时间戳命名，避免覆盖。
 
